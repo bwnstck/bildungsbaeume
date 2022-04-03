@@ -15,10 +15,14 @@ const Footer = ({
     <FooterWrapper>
       <p>
         {FooterContent.footerMeta} © {new Date().getFullYear()}
-        <button onClick={() => onSetImpress('impress')}>Impressum</button>
-        <button onClick={() => onSetImpress('dataSecurity')}>
-          Datenschutz
-        </button>
+        {FooterContent.impressBody && (
+          <button onClick={() => onSetImpress('impress')}>Impressum</button>
+        )}
+        {FooterContent.dataSecurityBody && (
+          <button onClick={() => onSetImpress('dataSecurity')}>
+            Datenschutz
+          </button>
+        )}
       </p>
       <Credits>
         made with <span className="luv">❤️</span>by{' '}
@@ -37,11 +41,9 @@ const Footer = ({
 export default Footer
 
 const FooterWrapper = styled.div`
-  height: 264;
   background-color: var(--color-background);
 
-  padding: 2rem 1rem 1rem;
-
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

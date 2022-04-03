@@ -61,7 +61,8 @@ const GlobalStyle = createGlobalStyle`
     /* Headings */
 
     h1,h2,h3,h4,h5,h6{
-      color: var(--primary-color);
+      /* color: var(--primary-color); */
+      color: var(--color-white);
       margin: 1rem 0 .5rem;
       font-weight: 500;
       text-align: left;
