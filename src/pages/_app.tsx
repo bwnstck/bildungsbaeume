@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app'
 
 import 'normalize.css'
+import 'bootstrap/dist/css/bootstrap.css'
 
 import GlobalStyle from '$styles/global'
 
