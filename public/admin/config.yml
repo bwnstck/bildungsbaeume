@@ -5,7 +5,7 @@ backend:
 media_folder: public/images
 site_url: https://wanderndebildungsbaeume.de
 display_url: wanderndebildungsbaeume.de
-logo_url: /images/logo.svg # Logo used in CMS
+logo_url: /logoBB.png # Logo used in CMS
 public_folder: /images
 # publish_mode: editorial_workflow
 locale: 'de'
@@ -99,6 +99,17 @@ collections:
     editor:
       preview: false
     files:
+      - name: 'UnderConstruction'
+        label: 'Im Aufbau'
+        file: 'meta/underConstruction.yml'
+        description: 'Im Aufbau'
+        fields:
+          - name: title
+            label: Titel
+            widget: 'string'
+          - name: body
+            label: Inhalt
+            widget: 'markdown'
       - name: 'Home'
         label: 'Landingpage'
         file: 'meta/home.yml'

@@ -6,7 +6,6 @@ import styled from 'styled-components'
 
 import Sections from '$meta/sections.yml'
 
-
 const LandingPage = () => {
 
 
@@ -32,6 +31,7 @@ const LandingPage = () => {
           <Body>{getData({ data: Sections, slug: "section4" }).content}</Body>
         </div> */}
       </ContentBox>
+
     </BodyWrapper>
   )
 }
@@ -39,8 +39,8 @@ const LandingPage = () => {
 export default LandingPage
 
 
-const BodyWrapper = styled.div`
-    background-color: var(--color-white);
+export const BodyWrapper = styled.div`
+    /* background-color: var(--color-white); */
   text-align: center;
   margin: 0 auto;
   padding: 1rem 0.5rem;

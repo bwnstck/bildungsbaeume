@@ -15,10 +15,14 @@ const Footer = ({
     <FooterWrapper>
       <p>
         {FooterContent.footerMeta} © {new Date().getFullYear()}
-        <button onClick={() => onSetImpress('impress')}>Impressum</button>
-        <button onClick={() => onSetImpress('dataSecurity')}>
-          Datenschutz
-        </button>
+        {FooterContent.impressBody &&
+          <button onClick={() => onSetImpress('impress')}>Impressum</button>
+        }
+        {FooterContent.dataSecurityBody &&
+          <button onClick={() => onSetImpress('dataSecurity')}>
+            Datenschutz
+          </button>
+        }
       </p>
       <Credits>
         made with <span className="luv">❤️</span>by{' '}
