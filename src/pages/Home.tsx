@@ -4,7 +4,6 @@ import { getData } from '$lib/data'
 
 import styled from 'styled-components'
 
-import HomeContent from '$meta/home.yml'
 import Sections from '$meta/sections.yml'
 
 
