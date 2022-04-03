@@ -7,7 +7,8 @@ import { BodyWrapper } from './Home'
 import styled from 'styled-components'
 
 import Data from '$meta/underConstruction.yml'
-import Logo from "$public/LogoBB.png"
+import Logo from "$public/logoBB.png"
+
 const UnderConstruction = () => {
 
     return (
