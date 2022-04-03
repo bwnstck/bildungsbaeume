@@ -1,0 +1,58 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    "babel-plugin-styled-components",
+    [
+      "babel-plugin-root-import",
+      {
+        "rootPathSuffix": "src",
+        "paths": [
+          {
+            "rootPathPrefix": "$components/",
+            "rootPathSuffix": "./src/components"
+          },
+          {
+            "rootPathPrefix": "$meta/",
+            "rootPathSuffix": "./meta"
+          },
+          {
+            "rootPathPrefix": "$public/",
+            "rootPathSuffix": "./public"
+          },
+          {
+            "rootPathPrefix": "$images/",
+            "rootPathSuffix": "./public/images"
+          },
+          {
+            "rootPathPrefix": "$styles/",
+            "rootPathSuffix": "./public/styles"
+          },
+          {
+            "rootPathPrefix": "$fonts/",
+            "rootPathSuffix": "./public/fonts"
+          },
+          {
+            "rootPathPrefix": "$icons/",
+            "rootPathSuffix": "./public/icons"
+          },
+          {
+            "rootPathPrefix": "$lib/",
+            "rootPathSuffix": "./src/lib"
+          },
+          {
+            "rootPathPrefix": "$types/",
+            "rootPathSuffix": "./src/types"
+          },
+          {
+            "rootPathPrefix": "$assets/",
+            "rootPathSuffix": "./src/assets"
+          },
+          {
+            "rootPathPrefix": "$pages/",
+            "rootPathSuffix": "./src/pages"
+          }
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,8 @@
+authors:
+  - slug: admin
+    name: Admin
+    introduction: its me, your admin!
+    profilePic: /images/nice.gif
+  - slug: exampleUser
+    name: Example User
+    introduction: Hello, its me!

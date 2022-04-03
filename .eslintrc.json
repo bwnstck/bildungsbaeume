@@ -1,0 +1,45 @@
+{
+  "extends": [
+    "next",
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "no-console": 1,
+    "indent": 0, // is handled by prettier
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // External Packages.
+          // Packages related to `react` and `next` come first then packages that start with a letter or `@` followed by a letter.
+          ["^react"],
+          ["^next"],
+          ["^@?\\w"],
+
+          // Internal packages.
+          ["^\\$components"],
+          ["^\\$pages"],
+          ["^\\$services"],
+          ["^\\$config", "^\\$lib", "^\\$test", "^\\$theme", "^\\$utils"],
+
+          // Side effect imports. The 'react-test-renderer' must be required after 'react-native'.
+          // ["^\\u0000", "^\\u0000react-native", "^react-test-renderer"],
+
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+
+          // Assets and style imports.
+          ["^styled", "^@?\\w", "^\\$assets", "^.+\\.s?css$", "^.+\\.styles$"]
+        ]
+      }
+    ]
+  }
+}

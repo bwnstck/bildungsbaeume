@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "allowUnreachableCode": false,
+    "baseUrl": ".",
+    "paths": {
+      /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+      "$components/*": ["src/components/*"],
+      "$lib/*": ["src/lib/*"],
+      "$images/*": ["public/images/*"],
+      "$fonts/*": ["public/fonts/*"],
+      "$styles/*": ["public/styles/*"],
+      "$public/*": ["public/*"],
+      "$icons/*": ["public/icons/*"],
+      "$types/*": ["src/types/*"],
+      "$meta/*": ["meta/*"],
+      "$assets/*": ["src/assets/*"],
+      "$pages/*": ["src/pages/*"]
+    },
+    "incremental": true
+  },
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true
+      }
+    ]
+  ],
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}
