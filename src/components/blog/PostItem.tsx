@@ -4,7 +4,7 @@ import { parseISO } from 'date-fns'
 
 import { PostContent } from '$lib/posts'
 
-import Date from "./Date"
+import Date from './Date'
 
 type Props = {
   post: PostContent

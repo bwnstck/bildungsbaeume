@@ -1,68 +1,67 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 
 import Footer from '$components/Footer'
 
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import FooterContent from '$meta/footerContent.yml'
 
 export type MetaState = 'notShown' | 'impress' | 'dataSecurity'
 
 interface ImpressProps {
-    visible: boolean
+  visible: boolean
 }
 
 const FooterWithImpress = () => {
-    const [showImpress, setShowImpress] = useState<MetaState>('notShown')
+  const [showImpress, setShowImpress] = useState<MetaState>('notShown')
 
-    const impressRef = useRef(null)
-    const dataSecurityRef = useRef(null)
+  const impressRef = useRef(null)
+  const dataSecurityRef = useRef(null)
 
-    const handleShowMeta = (type: MetaState) => {
-        if (type === 'impress') {
-            setShowImpress('impress')
-            setTimeout(() => {
-                impressRef.current?.scrollIntoView({ behavior: 'smooth' })
-            }, 100)
-        }
-        if (type === 'dataSecurity') {
-            setShowImpress('dataSecurity')
-            setTimeout(() => {
-                dataSecurityRef.current?.scrollIntoView({ behavior: 'smooth' })
-            }, 100)
-        }
-        if (type === 'notShown') {
-            setShowImpress('notShown')
-        }
+  const handleShowMeta = (type: MetaState) => {
+    if (type === 'impress') {
+      setShowImpress('impress')
+      setTimeout(() => {
+        impressRef.current?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
     }
+    if (type === 'dataSecurity') {
+      setShowImpress('dataSecurity')
+      setTimeout(() => {
+        dataSecurityRef.current?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    }
+    if (type === 'notShown') {
+      setShowImpress('notShown')
+    }
+  }
 
-    return (
-        <>
-            <Footer onSetImpress={handleShowMeta} />
-            <ImpressWrapper visible={showImpress === 'impress'} ref={impressRef}>
-                <TitleAndClose>
-                    <h3>Impressum</h3>
-                    <button onClick={() => handleShowMeta('notShown')}>X</button>
-                </TitleAndClose>
-                <Body>{FooterContent.impressBody}</Body>
-            </ImpressWrapper>
-            <DataSecurityWrapper
-                visible={showImpress === 'dataSecurity'}
-                ref={dataSecurityRef}
-            >
-                <TitleAndClose>
-                    <h3>Datenschutz</h3>
-                    <button onClick={() => handleShowMeta('notShown')}>X</button>
-                </TitleAndClose>
-                <Body>{FooterContent.dataSecurityBody}</Body>
-            </DataSecurityWrapper>
-        </>
-    )
-};
+  return (
+    <>
+      <Footer onSetImpress={handleShowMeta} />
+      <ImpressWrapper visible={showImpress === 'impress'} ref={impressRef}>
+        <TitleAndClose>
+          <h3>Impressum</h3>
+          <button onClick={() => handleShowMeta('notShown')}>X</button>
+        </TitleAndClose>
+        <Body>{FooterContent.impressBody}</Body>
+      </ImpressWrapper>
+      <DataSecurityWrapper
+        visible={showImpress === 'dataSecurity'}
+        ref={dataSecurityRef}
+      >
+        <TitleAndClose>
+          <h3>Datenschutz</h3>
+          <button onClick={() => handleShowMeta('notShown')}>X</button>
+        </TitleAndClose>
+        <Body>{FooterContent.dataSecurityBody}</Body>
+      </DataSecurityWrapper>
+    </>
+  )
+}
 
-export default FooterWithImpress;
-
+export default FooterWithImpress
 
 const Body = styled(ReactMarkdown)`
   text-align: left;
