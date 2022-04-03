@@ -41,11 +41,9 @@ const Footer = ({
 export default Footer
 
 const FooterWrapper = styled.div`
-  height: 264;
   background-color: var(--color-background);
 
-  padding: 2rem 1rem 1rem;
-
+  padding:  1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

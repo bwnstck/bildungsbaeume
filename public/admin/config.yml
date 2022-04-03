@@ -61,6 +61,9 @@ collections:
           - name: body
             label: Inhalt
             widget: 'markdown'
+          - name: instaName
+            label: Instagram Username
+            widget: 'string'
       - name: 'footerContent'
         label: 'Footer Datenschutz Impressum'
         file: 'meta/footerContent.yml'
