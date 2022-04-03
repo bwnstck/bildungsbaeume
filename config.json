@@ -1,7 +1,7 @@
 {
-  "base_url": "https://yourpage.tld",
-  "site_title": "👋 Next JS Netlify",
-  "site_description": "SITE DESCRIPTION",
+  "base_url": "https://wanderndebildungsbaeume.de",
+  "site_title": "🌳 Wandernde Bildungsbäume e.V.",
+  "site_description": "Die Homepage der wandernden Bildungsbäume Heilbronn e.V.",
   "site_keywords": [
     {
       "keyword": "Next.js"
