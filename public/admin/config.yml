@@ -118,18 +118,15 @@ collections:
         file: 'meta/home.yml'
         description: 'Landingpage'
         fields:
-          - name: title
-            label: Titel
-            widget: 'string'
-          - name: body
-            label: Inhalt
-            widget: 'markdown'
-          - name: attention
-            label: Aufmerksamkeit
-            widget: 'string'
-          - name: surveyUrl
-            label: Umfrage Url
-            widget: 'string'
+          - name: section1
+            label: Erster Abschnitt
+            fields:
+              - name: Titel
+                label: Titel
+                widget: 'string'
+              - name: body
+                label: Inhalt
+                widget: 'markdown'
       - name: 'footerContent'
         label: 'Footer'
         file: 'meta/footerContent.yml'
