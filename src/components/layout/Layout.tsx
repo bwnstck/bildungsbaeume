@@ -1,7 +1,5 @@
 import Head from 'next/head'
 
-import UnderConstruction from '$pages/UnderConstruction'
-
 import FooterWithImpress from './FooterWithImpress'
 import Header from './Header'
 

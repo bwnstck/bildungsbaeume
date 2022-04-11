@@ -4,24 +4,26 @@ import Image from 'next/image'
 
 import styled from 'styled-components'
 
-import Logo from '$public/icon.png'
+import Data from '/config.json'
+import Logo from '$public/logoBB.png'
 
 interface MenuItemProp {
   name: string
   onClick: () => void
 }
+
 const MenuItems: MenuItemProp[] = [
   {
-    name: 'Menu Item 1',
+    name: 'Was?',
     onClick: () => document.getElementById('Section1').scrollIntoView(),
   },
   {
-    name: 'Menu Item 2',
+    name: 'Wo?',
     onClick: () => document.getElementById('Section2').scrollIntoView(),
   },
   {
-    name: 'UP',
-    onClick: () => document.getElementById('Top').scrollIntoView(),
+    name: 'Wie?',
+    onClick: () => document.getElementById('Section3').scrollIntoView(),
   },
 ]
 const Header = () => {
@@ -31,7 +33,7 @@ const Header = () => {
         <Image src={Logo} alt="Logo" />
       </LogoWrapper>
       <MenuWrapper>
-        <p>Site Title</p>
+        <p>{Data.site_title}</p>
         <ul>
           {MenuItems.map((menuItem) => (
             <li key={menuItem.name} onClick={menuItem.onClick}>
@@ -67,20 +69,20 @@ const MenuWrapper = styled.div`
       padding: 0.75rem;
       :active,
       :hover {
-        color: red;
+        color: #e6501a;
       }
     }
   }
 `
 const LogoWrapper = styled.div`
   width: 5rem;
+  min-width: 5rem;
 `
 const HeaderWrapper = styled.section`
   display: flex;
-
+  align-items: flex-end;
   width: 100%;
-  padding: 2rem;
-  /* max-width: 00px; */
+  padding: 1rem 2rem 0;
   background-color: var(--color-background);
   color: var(--color-white);
 `

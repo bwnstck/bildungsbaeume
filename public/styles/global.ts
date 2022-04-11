@@ -79,13 +79,13 @@ const GlobalStyle = createGlobalStyle`
       font-size: clamp(1.5rem, 5vw, 3rem);
     }
     h4{
-      font-size: clamp(1rem, 5vw, 2.5rem);
+      font-size: clamp(1rem, 5vw, 1.5rem);
     }
 
     /* Text */
 
     p {
-      font-size: clamp(1rem, 5vw, 1.5rem);
+      font-size: clamp(0.75rem, 5vw, 1rem);
       font-weight: 400;
       color: var(--color-text)
     }
