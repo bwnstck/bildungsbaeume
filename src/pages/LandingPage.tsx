@@ -10,9 +10,19 @@ const LandingPage = () => {
   return (
     <BodyWrapper>
       <ContentBox id="Section1">
-        <Section id={'Section1'} slug={'section1'} logo={Sprout} />
+        <Section
+          id={'Section1'}
+          slug={'section1'}
+          logo={Sprout}
+          rounded={'top'}
+        />
         <Section id={'Section2'} slug={'section2'} logo={Where} isWhite />
-        <Section id={'Section3'} slug={'section3'} logo={Support} />
+        <Section
+          id={'Section3'}
+          slug={'section3'}
+          logo={Support}
+          rounded={'bottom'}
+        />
       </ContentBox>
     </BodyWrapper>
   )
@@ -26,7 +36,7 @@ const BodyWrapper = styled.div`
 `
 
 const ContentBox = styled.div`
-  background-color: #fff;
   max-width: 800px;
   margin: 0 auto 2rem;
+  padding: 0 .5rem 0;
 `

@@ -8,15 +8,18 @@ import { getData } from '$lib/data'
 import styled from 'styled-components'
 
 import Sections from '$meta/sections.yml'
+
 interface SectionProps {
   isWhite?: boolean
   slug: string
   id: string
   logo: StaticImageData
+  rounded?: 'top' | 'bottom'
 }
-const Section = ({ isWhite, slug, id, logo }: SectionProps) => {
+
+const Section = ({ isWhite, slug, id, logo, rounded }: SectionProps) => {
   return (
-    <StyledSection id={id} isWhite={isWhite}>
+    <StyledSection id={id} isWhite={isWhite} rounded={rounded}>
       <div>
         <LogoWrapper>
           <Image src={logo} alt="Logo" />
@@ -32,6 +35,7 @@ export default Section
 
 interface StyledSectionProps {
   isWhite?: boolean
+  rounded?: 'top' | 'bottom'
 }
 
 const LogoWrapper = styled.div`
@@ -40,8 +44,13 @@ const LogoWrapper = styled.div`
   margin-right: 1rem;
 `
 const StyledSection = styled.div<StyledSectionProps>`
-  background-color: ${(props) =>
-    props.isWhite ? '#fff' : 'rgba(237, 169, 21, 0.2)'};
+  background-color: ${(props) => (props.isWhite ? '#fff' : '#FFE1A6')};
+  border-radius: ${(props) =>
+    props.rounded === 'top'
+      ? '10px 10px 0 0'
+      : props.rounded === 'bottom'
+      ? '0 0 10px 10px'
+      : ''};
   padding: 2rem 2rem 0;
 
   > :first-child {
