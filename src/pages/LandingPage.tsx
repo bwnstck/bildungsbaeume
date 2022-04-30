@@ -53,7 +53,8 @@ const LandingPage = () => {
           rounded={'bottom'}
         >
           <p>
-            Du willst den „Wandernde Bildungsbäume e.V." unterstützen? <br />
+            Du willst den <b>Wandernde Bildungsbäume e.V.</b> unterstützen?
+            <br />
             Im Sinne der Bäume vielleicht etwas hinblättern? :)
           </p>
           <br />
