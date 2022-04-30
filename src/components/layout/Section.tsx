@@ -11,13 +11,21 @@ import Sections from '$meta/sections.yml'
 
 interface SectionProps {
   isWhite?: boolean
-  slug: string
+  slug?: string
   id: string
   logo: StaticImageData
   rounded?: 'top' | 'bottom'
+  children: React.ReactNode
 }
 
-const Section = ({ isWhite, slug, id, logo, rounded }: SectionProps) => {
+const Section = ({
+  isWhite,
+  slug,
+  id,
+  logo,
+  rounded,
+  children,
+}: SectionProps) => {
   return (
     <StyledSection id={id} isWhite={isWhite} rounded={rounded}>
       <div>
@@ -26,7 +34,8 @@ const Section = ({ isWhite, slug, id, logo, rounded }: SectionProps) => {
         </LogoWrapper>
         <h4>{getData({ data: Sections, slug }).name}</h4>
       </div>
-      <Body>{getData({ data: Sections, slug }).content}</Body>
+      <ContentContainer>{children}</ContentContainer>
+      {/* <Body>{getData({ data: Sections, slug }).content}</Body> */}
     </StyledSection>
   )
 }
@@ -51,7 +60,7 @@ const StyledSection = styled.div<StyledSectionProps>`
       : props.rounded === 'bottom'
       ? '0 0 10px 10px'
       : ''};
-  padding: 2rem 2rem 0;
+  padding: 2rem 2rem 1rem;
 
   > :first-child {
     display: flex;
@@ -61,14 +70,22 @@ const StyledSection = styled.div<StyledSectionProps>`
   h4 {
     color: black;
   }
-`
 
-const Body = styled(ReactMarkdown)`
-  text-align: left;
-  font-size: 40px;
-  margin: auto;
-  > p {
-    line-height: 40px;
-    padding-bottom: 1rem;
+  ul {
+    list-style-position: inside;
   }
 `
+
+const ContentContainer = styled.div`
+  text-align: left;
+`
+
+// const Body = styled(ReactMarkdown)`
+//   text-align: left;
+//   font-size: 40px;
+//   margin: auto;
+//   > p {
+//     line-height: 40px;
+//     padding-bottom: 1rem;
+//   }
+// `

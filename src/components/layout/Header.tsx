@@ -33,7 +33,7 @@ const Header = () => {
         <Image src={Logo} alt="Logo" />
       </LogoWrapper>
       <MenuWrapper>
-        <p>{Data.site_title}</p>
+        <span>{Data.site_title}</span>
         <ul>
           {MenuItems.map((menuItem) => (
             <li key={menuItem.name} onClick={menuItem.onClick}>
@@ -49,10 +49,11 @@ const Header = () => {
 export default Header
 
 const MenuWrapper = styled.div`
-  p {
+  span {
     font-size: 2rem;
     margin-left: 0.5rem;
     color: var(--text-color);
+    display: inline-block;
   }
   ul {
     display: flex;
