@@ -2,8 +2,6 @@ import ReactMarkdown from 'react-markdown'
 
 import Image from 'next/image'
 
-import { BodyWrapper } from './Home'
-
 import styled from 'styled-components'
 
 import Insta from '$images/insta.png'
@@ -37,6 +35,11 @@ const UnderConstruction = () => {
 
 export default UnderConstruction
 
+const BodyWrapper = styled.div`
+  background-color: var(--color-white);
+  text-align: center;
+  margin: 0 auto;
+`
 const StyledBody = styled(BodyWrapper)`
   display: flex;
   flex-direction: column;

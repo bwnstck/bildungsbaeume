@@ -64,20 +64,6 @@ collections:
           - name: instaName
             label: Instagram Username
             widget: 'string'
-      - name: 'Home'
-        label: 'Landingpage'
-        file: 'meta/home.yml'
-        description: 'Landingpage'
-        fields:
-          - name: section1
-            label: Erster Abschnitt
-            fields:
-              - name: Titel
-                label: Titel
-                widget: 'string'
-              - name: body
-                label: Inhalt
-                widget: 'markdown'
       - name: 'footerContent'
         label: 'Footer Datenschutz Impressum'
         file: 'meta/footerContent.yml'

@@ -66,6 +66,7 @@ const GlobalStyle = createGlobalStyle`
       margin: 1rem 0 .5rem;
       font-weight: 500;
       text-align: left;
+      line-height:1.5
     }
 
     h1{
@@ -79,15 +80,16 @@ const GlobalStyle = createGlobalStyle`
       font-size: clamp(1.5rem, 5vw, 3rem);
     }
     h4{
-      font-size: clamp(1rem, 5vw, 2.5rem);
+      font-size: clamp(1rem, 5vw, 1.5rem);
     }
 
     /* Text */
 
-    p {
-      font-size: clamp(1rem, 5vw, 1.5rem);
-      font-weight: 400;
-      color: var(--color-text)
+    p, li{
+      font-size: clamp(0.75rem, 5vw, 1rem);
+      font-weight: 300;
+      color: var(--color-text);
+      line-height: 2
     }
 
     span {
