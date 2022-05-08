@@ -68,30 +68,39 @@ collections:
           - name: instaName
             label: Instagram Username
             widget: 'string'
-      - name: 'Home'
-        label: 'Landingpage'
-        file: 'meta/home.yml'
-        description: 'Landingpage'
+      # - name: 'Home'
+      #   label: 'Landingpage'
+      #   file: 'meta/home.yml'
+      #   description: 'Landingpage'
+      #   fields:
+      #     - name: section1Title
+      #       label: Titel Erster Abschnitt
+      #       widget: 'string'
+      #     - name: section1
+      #       label: Erster Abschnitt
+      #       hint: Was sind die wandernden Bildungsbäume?
+      #       widget: 'markdown'
+      #     - name: section2Title
+      #       label: Titel Zweiter Abschnitt
+      #       widget: 'string'
+      #     - name: section2
+      #       label: Zweiter Abschnitt
+      #       widget: 'markdown'
+      #     - name: section3Title
+      #       label: Titel Dritter Abschnitt
+      #       widget: 'string'
+      #     - name: section3
+      #       label: Dritter Abschnitt
+      #       widget: 'markdown'
+      - name: 'sections'
+        label: 'Hauptseite Abschnitte'
+        file: 'meta/sections.yml'
+        description: 'Abschnitte auf der Hauptseite'
+        create: true,
+        max: 5,
         fields:
-          - name: section1Title
-            label: Titel Erster Abschnitt
-            widget: 'string'
-          - name: section1
-            label: Erster Abschnitt
-            hint: Was sind die wandernden Bildungsbäume?
-            widget: 'markdown'
-          - name: section2Title
-            label: Titel Zweiter Abschnitt
-            widget: 'string'
-          - name: section2
-            label: Zweiter Abschnitt
-            widget: 'markdown'
-          - name: section3Title
-            label: Titel Dritter Abschnitt
-            widget: 'string'
-          - name: section3
-            label: Dritter Abschnitt
-            widget: 'markdown'
+          - { name: title, label: Titel }
+          - { name: body, label: Inhalt, widget: markdown }
       - name: 'footerContent'
         label: 'Footer Datenschutz Impressum'
         file: 'meta/footerContent.yml'
