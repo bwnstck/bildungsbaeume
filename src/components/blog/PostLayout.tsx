@@ -98,6 +98,7 @@ export default function PostLayout({
       <style jsx>
         {`
           .container {
+            background-color: #ffe1a6;
             display: block;
             max-width: 36rem;
             width: 100%;

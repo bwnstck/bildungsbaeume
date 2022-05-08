@@ -50,13 +50,17 @@ collections:
     editor:
       preview: false
     files:
-      - name: 'UnderConstruction'
+      - name: 'underConstruction'
         label: 'Im Aufbau'
         file: 'meta/underConstruction.yml'
         description: 'Im Aufbau'
         fields:
-          - name: title
-            label: Titel
+          - label: Im Aufbau
+            name: underConstructionToggle
+            widget: 'boolean'
+            default: true
+          - label: Titel
+            name: title
             widget: 'string'
           - name: body
             label: Inhalt

@@ -1,4 +1,5 @@
 import { format, formatISO } from 'date-fns'
+import { de } from 'date-fns/locale'
 
 type Props = {
   date: Date
@@ -6,11 +7,11 @@ type Props = {
 export default function Date({ date }: Props) {
   return (
     <time dateTime={formatISO(date)}>
-      <span>{format(date, 'LLLL d, yyyy')}</span>
+      <span>{format(date, 'd. LLLL yyyy', { locale: de })}</span>
       <style jsx>
         {`
           span {
-            color: #9b9b9b;
+            color: var(--color-cta);
           }
         `}
       </style>

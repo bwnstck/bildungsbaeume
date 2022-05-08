@@ -28,9 +28,11 @@ const Section = ({
   return (
     <StyledSection id={id} isWhite={isWhite} rounded={rounded}>
       <div>
-        <LogoWrapper>
-          <Image src={logo} alt="Logo" />
-        </LogoWrapper>
+        {logo && (
+          <LogoWrapper>
+            <Image src={logo} alt="Logo" />
+          </LogoWrapper>
+        )}
         <h4>{getData({ data: Sections, slug }).name}</h4>
       </div>
       <ContentContainer>{children}</ContentContainer>

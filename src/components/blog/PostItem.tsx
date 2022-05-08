@@ -14,14 +14,14 @@ export default function PostItem({ post }: Props) {
     <Link href={'/posts/' + post.slug}>
       <a>
         <Date date={parseISO(post.date)} />
-        <h2>{post.title}</h2>
+        <h3>{post.title}</h3>
         <style jsx>
           {`
             a {
               color: #222;
               display: inline-block;
             }
-            h2 {
+            h3 {
               margin: 0;
               font-weight: 500;
             }

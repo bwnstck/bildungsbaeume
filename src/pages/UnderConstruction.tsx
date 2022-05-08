@@ -36,7 +36,6 @@ const UnderConstruction = () => {
 export default UnderConstruction
 
 const BodyWrapper = styled.div`
-  background-color: var(--color-white);
   text-align: center;
   margin: 0 auto;
 `

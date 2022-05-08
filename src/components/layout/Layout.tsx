@@ -1,9 +1,13 @@
 import Head from 'next/head'
 
+import UnderConstruction from '$pages/UnderConstruction'
+
 import FooterWithImpress from './FooterWithImpress'
 import Header from './Header'
 
 import styled from 'styled-components'
+
+import data from '$meta/underConstruction.yml'
 
 type Props = {
   children: React.ReactNode
@@ -37,9 +41,14 @@ export default function Layout({ children }: Props) {
           <link rel="stylesheet" href="https://use.typekit.net/afc8oob.css" />
           <meta name="theme-color" content="#fff" />
         </Head>
-        <Header />
-        {/* <UnderConstruction /> */}
-        <Wrapper>{children}</Wrapper>
+        {data.underConstructionToggle ? (
+          <UnderConstruction />
+        ) : (
+          <>
+            <Header />
+            <Wrapper>{children}</Wrapper>
+          </>
+        )}
         <FooterWithImpress />
       </div>
       {/* <Script
