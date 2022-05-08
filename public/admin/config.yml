@@ -73,15 +73,25 @@ collections:
         file: 'meta/home.yml'
         description: 'Landingpage'
         fields:
+          - name: section1Title
+            label: Titel Erster Abschnitt
+            widget: 'string'
           - name: section1
             label: Erster Abschnitt
-            fields:
-              - name: Titel
-                label: Titel
-                widget: 'string'
-              - name: body
-                label: Inhalt
-                widget: 'markdown'
+            hint: Was sind die wandernden Bildungsbäume?
+            widget: 'markdown'
+          - name: section2Title
+            label: Titel Zweiter Abschnitt
+            widget: 'string'
+          - name: section2
+            label: Zweiter Abschnitt
+            widget: 'markdown'
+          - name: section3Title
+            label: Titel Dritter Abschnitt
+            widget: 'string'
+          - name: section3
+            label: Dritter Abschnitt
+            widget: 'markdown'
       - name: 'footerContent'
         label: 'Footer Datenschutz Impressum'
         file: 'meta/footerContent.yml'
