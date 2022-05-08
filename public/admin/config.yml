@@ -96,11 +96,29 @@ collections:
         label: 'Hauptseite Abschnitte'
         file: 'meta/sections.yml'
         description: 'Abschnitte auf der Hauptseite'
-        create: true,
-        max: 5,
+        widget: object
         fields:
-          - { name: title, label: Titel }
-          - { name: body, label: Inhalt, widget: markdown }
+          -  name: section1,
+             label: Erster Abschnitt
+             widget: object
+             collapsed: true
+             fields:
+              -  name: title, label: Titel
+              -  name: body, label: Inhalt, widget: markdown
+          -  name: section2,
+             label: Zweiter Abschnitt
+             widget: object
+             collapsed: true
+             fields:
+              -  name: title, label: Titel
+              -  name: body, label: Inhalt, widget: markdown
+          -  name: section3,
+             label: Dritter Abschnitt
+             widget: object
+             collapsed: true
+             fields:
+              -  name: title, label: Titel
+              -  name: body, label: Inhalt, widget: markdown
       - name: 'footerContent'
         label: 'Footer Datenschutz Impressum'
         file: 'meta/footerContent.yml'
