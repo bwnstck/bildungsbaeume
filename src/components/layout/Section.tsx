@@ -46,9 +46,9 @@ const StyledSection = styled.div<StyledSectionProps>`
   background-color: ${(props) => (props.isWhite ? '#fff' : '#FFE1A6')};
   border-radius: ${(props) =>
     props.rounded === 'top'
-      ? '10px 10px 0 0'
+      ? '5px 5px 0 0'
       : props.rounded === 'bottom'
-      ? '0 0 10px 10px'
+      ? '0 0 5px 5px'
       : ''};
   padding: 2rem 2rem 1rem;
 
@@ -66,9 +66,9 @@ const StyledSection = styled.div<StyledSectionProps>`
   }
 `
 
-const ContentContainer = styled.div`
-  text-align: left;
-`
+// const ContentContainer = styled.div`
+//   text-align: left;
+// `
 
 const Body = styled(ReactMarkdown)`
   text-align: left;

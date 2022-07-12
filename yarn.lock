@@ -3793,6 +3793,18 @@ elliptic@^6.5.3:
     minimalistic-assert "^1.0.1"
     minimalistic-crypto-utils "^1.0.1"
 
+embla-carousel-react@^7.0.0-rc04:
+  version "7.0.0-rc04"
+  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-7.0.0-rc04.tgz#ee3e954d746be509aecb78e81ada2ed094f89cfb"
+  integrity sha512-5Ndn+EeLX9DPZnR1wXH5+y9gnrh+ML5HO0+20l6rcnuhVqpJRMv2E3ZWnAw4jw7HmHAl+5eDKZaA6CGxgWiUdQ==
+  dependencies:
+    embla-carousel "7.0.0-rc04"
+
+embla-carousel@7.0.0-rc04:
+  version "7.0.0-rc04"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-7.0.0-rc04.tgz#bd9c15da7740660b46232fba720b0c38043b667f"
+  integrity sha512-vhzwCEdEqwS5c6jlfPHy/X1uUkwf9AvMma8KWNbmTgB3NUNN9hoqiyTdrpraMtPU5MzlxpZipln74ZwDK4v63g==
+
 emittery@^0.7.1:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.7.2.tgz#25595908e13af0f5674ab419396e2fb394cdfa82"
