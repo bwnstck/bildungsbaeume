@@ -25,7 +25,7 @@ const LandingPage = () => {
         />
         <iframe
           width="100%"
-          height="315"
+          height="400"
           src="https://www.youtube-nocookie.com/embed/4O4VtLf7RLA"
           title="YouTube video player"
           frameBorder="0"
