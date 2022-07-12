@@ -2,7 +2,6 @@
 
 export const generateDataMap = (data) => {
   const result: { [key: string]: any } = {}
-
   const directData = data[Object.keys(data)[0]]
 
   for (const entry of directData) {
