@@ -45,7 +45,6 @@ const LandingPage = () => {
           title={Sections.section3.title}
           body={Sections.section3.body}
           logo={Support}
-          rounded={'bottom'}
         />
         <Section
           id={'Section4'}

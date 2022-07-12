@@ -4,6 +4,8 @@ import { ReactElement } from 'react-markdown/lib/react-markdown'
 
 import Image from 'next/image'
 
+import MarkdownBody from '$components/MarkDownBody'
+
 import styled from 'styled-components'
 
 interface SectionProps {
@@ -36,7 +38,7 @@ const Section = ({
         <h4>{title}</h4>
       </div>
       {children}
-      {body && <Body>{body}</Body>}
+      {body && <MarkdownBody>{body}</MarkdownBody>}
     </StyledSection>
   )
 }
@@ -74,23 +76,5 @@ const StyledSection = styled.div<StyledSectionProps>`
 
   ul {
     list-style-position: inside;
-  }
-`
-
-// const ContentContainer = styled.div`
-//   text-align: left;
-// `
-
-const Body = styled(ReactMarkdown)`
-  text-align: left;
-  font-size: 40px;
-  margin: auto;
-  > p {
-    line-height: 40px;
-    padding-bottom: 1rem;
-  }
-  a {
-    color: var(--primary-color);
-    font-weight: 400;
   }
 `
