@@ -89,4 +89,8 @@ const Body = styled(ReactMarkdown)`
     line-height: 40px;
     padding-bottom: 1rem;
   }
+  a {
+    color: var(--primary-color);
+    font-weight: 400;
+  }
 `
