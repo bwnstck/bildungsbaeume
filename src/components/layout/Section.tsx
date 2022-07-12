@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import { ReactElement } from 'react-markdown/lib/react-markdown'
 
 import Image from 'next/image'
 
@@ -12,9 +13,18 @@ interface SectionProps {
   id: string
   logo: StaticImageData
   rounded?: 'top' | 'bottom'
+  children?: ReactElement
 }
 
-const Section = ({ isWhite, title, body, id, logo, rounded }: SectionProps) => {
+const Section = ({
+  isWhite,
+  title,
+  body,
+  id,
+  logo,
+  rounded,
+  children,
+}: SectionProps) => {
   return (
     <StyledSection id={id} isWhite={isWhite} rounded={rounded}>
       <div>
@@ -25,7 +35,8 @@ const Section = ({ isWhite, title, body, id, logo, rounded }: SectionProps) => {
         )}
         <h4>{title}</h4>
       </div>
-      <Body>{body}</Body>
+      {children}
+      {body && <Body>{body}</Body>}
     </StyledSection>
   )
 }

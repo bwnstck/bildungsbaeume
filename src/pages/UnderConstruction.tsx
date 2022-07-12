@@ -2,36 +2,23 @@ import ReactMarkdown from 'react-markdown'
 
 import Image from 'next/image'
 
+import InstaIcon from '$components/InstaIcon'
+
 import styled from 'styled-components'
 
-import Insta from '$images/insta.png'
 import Data from '$meta/underConstruction.yml'
 import Logo from '$public/logoBB.png'
 
-const UnderConstruction = () => {
-  return (
-    <StyledBody>
-      <h1>{Data.title}</h1>
-      <div className="logo">
-        <Image src={Logo} alt="Logo" />
-      </div>
-      <StyledP>{Data.body}</StyledP>
-      {Data?.instaName?.trim().length && (
-        <>
-          <p className="insta-text">Folge uns derweil auf Instagram</p>
-          <a
-            href={`https://www.instagram.com/${Data.instaName}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="insta-logo"
-          >
-            <Image src={Insta} alt="Instagram Logo" />
-          </a>
-        </>
-      )}
-    </StyledBody>
-  )
-}
+const UnderConstruction = () => (
+  <StyledBody>
+    <h1>{Data.title}</h1>
+    <div className="logo">
+      <Image src={Logo} alt="Logo" />
+    </div>
+    <StyledP>{Data.body}</StyledP>
+    <InstaIcon text="Folge uns derweil auf Instagram" />
+  </StyledBody>
+)
 
 export default UnderConstruction
 

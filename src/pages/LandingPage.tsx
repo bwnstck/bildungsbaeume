@@ -1,4 +1,5 @@
 import Carousel from '$components/Carousel'
+import InstaIcon from '$components/InstaIcon'
 import Section from '$components/layout/Section'
 
 import styled from 'styled-components'
@@ -46,6 +47,22 @@ const LandingPage = () => {
           logo={Support}
           rounded={'bottom'}
         />
+        <Section
+          id={'Section4'}
+          title={'Folge uns'}
+          logo={Support}
+          rounded={'bottom'}
+          isWhite
+        >
+          <InstaIcon
+            style={{
+              marginTop: '1rem',
+              width: '100px',
+              align: 'center',
+              margin: 'auto',
+            }}
+          />
+        </Section>
       </ContentBox>
     </BodyWrapper>
   )
