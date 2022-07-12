@@ -1,3 +1,4 @@
+import Carousel from '$components/Carousel'
 import Section from '$components/layout/Section'
 
 import styled from 'styled-components'
@@ -5,70 +6,46 @@ import styled from 'styled-components'
 import Sprout from '$images/sprout.png'
 import Support from '$images/support.png'
 import Where from '$images/where.png'
+import Sections from '$meta/sections.yml'
+
+const SLIDE_COUNT = 5
+const slides = Array.from(Array(SLIDE_COUNT).keys())
 
 const LandingPage = () => {
   return (
     <BodyWrapper>
+      <Carousel slides={slides} />
       <ContentBox id="Section1">
         <Section
           id={'Section1'}
-          slug={'section1'}
+          title={Sections.section1.title}
+          body={Sections.section1.body}
           logo={Sprout}
           rounded={'top'}
-        >
-          <p>
-            Wandernde Bildungsbäume sind selbstgebaute mobilen Holzwägen, in
-            denen diverse Bäume gepflanzt sind und dort ein halbes Jahr wachsen.
-            Die hierfür benötigten Materialien sind Spenden der Firma Holz Hauff
-            in Leingarten. Bei den Bäumen, die darin gepflanzt werden sind
-            ebenso Spenden von mehreren Baumschulen der Region Heilbronn.
-          </p>
-          <br />
-          <p>
-            Zu Beginn des Projektes haben Schülerinnen und Schüler der folgenden
-            Schulen beim Bauen der Holzwägen selbst mit angepackt:
-          </p>
-          <ul>
-            <li>
-              <b>Berufschule Heilbronn</b> - Schreiner Klasse
-            </li>
-            <li>
-              <b>Holz Hauf</b>
-            </li>
-          </ul>
-        </Section>
-        <Section id={'Section2'} slug={'section2'} logo={Where} isWhite>
-          <p>
-            Wo sich die Bäume aktuell befinden findest du unter auf Instagram.
-          </p>
-          <p>
-            Vielleicht sind sie ja aktuell ganz in deiner Nähe - über einen
-            Besuch werden sie sich jederzeit freuen!
-          </p>
-        </Section>
+        />
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/4O4VtLf7RLA"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+        <Section
+          id={'Section2'}
+          title={Sections.section2.title}
+          body={Sections.section2.body}
+          logo={Where}
+          isWhite
+        />
         <Section
           id={'Section3'}
-          slug={'section3'}
+          title={Sections.section3.title}
+          body={Sections.section3.body}
           logo={Support}
           rounded={'bottom'}
-        >
-          <p>
-            Du willst den <b>Wandernde Bildungsbäume e.V.</b> unterstützen?
-            <br />
-            Im Sinne der Bäume vielleicht etwas hinblättern? :)
-          </p>
-          <br />
-          <p>
-            Wir freuen uns über Deine Unterstützung und jede Spende. Auf dass
-            wir mit Hilfe des Vereins allen Kindern, Jugendlichen oder jungen
-            Erwachsenen auch in der Stadt Heilbronn das Zusammenleben mit den
-            Bäumen und der Natur erklären und näherbringen können.
-          </p>
-          <h4>Unser Spendenkonto:</h4>
-          <p>Wandernde Bildungsbäumen e.V.</p>
-          <p>DE 46 6205 0000 0000 6165 11</p>
-          <p>Kreissparkasse Heilbronn</p>
-        </Section>
+        />
       </ContentBox>
     </BodyWrapper>
   )
