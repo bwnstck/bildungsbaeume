@@ -1,30 +1,20 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
 import Image from 'next/image'
 
-import { getData } from '$lib/data'
-
 import styled from 'styled-components'
-
-import Sections from '$meta/sections.yml'
 
 interface SectionProps {
   isWhite?: boolean
-  slug?: string
+  title?: string
+  body?: string
   id: string
   logo: StaticImageData
   rounded?: 'top' | 'bottom'
-  children: React.ReactNode
 }
 
-const Section = ({
-  isWhite,
-  slug,
-  id,
-  logo,
-  rounded,
-  children,
-}: SectionProps) => {
+const Section = ({ isWhite, title, body, id, logo, rounded }: SectionProps) => {
   return (
     <StyledSection id={id} isWhite={isWhite} rounded={rounded}>
       <div>
@@ -33,10 +23,9 @@ const Section = ({
             <Image src={logo} alt="Logo" />
           </LogoWrapper>
         )}
-        <h4>{getData({ data: Sections, slug }).name}</h4>
+        <h4>{title}</h4>
       </div>
-      <ContentContainer>{children}</ContentContainer>
-      {/* <Body>{getData({ data: Sections, slug }).content}</Body> */}
+      <Body>{body}</Body>
     </StyledSection>
   )
 }
@@ -81,12 +70,12 @@ const ContentContainer = styled.div`
   text-align: left;
 `
 
-// const Body = styled(ReactMarkdown)`
-//   text-align: left;
-//   font-size: 40px;
-//   margin: auto;
-//   > p {
-//     line-height: 40px;
-//     padding-bottom: 1rem;
-//   }
-// `
+const Body = styled(ReactMarkdown)`
+  text-align: left;
+  font-size: 40px;
+  margin: auto;
+  > p {
+    line-height: 40px;
+    padding-bottom: 1rem;
+  }
+`
