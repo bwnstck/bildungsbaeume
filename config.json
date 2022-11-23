@@ -2,23 +2,7 @@
   "base_url": "https://wanderndebildungsbaeume.de",
   "site_title": "Wandernde Bildungsbäume e.V. 🌳",
   "site_description": "Die Homepage der wandernden Bildungsbäume Heilbronn e.V.",
-  "site_keywords": [
-    {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Netlify"
-    },
-    {
-      "keyword": "React"
-    },
-    {
-      "keyword": "Musik"
-    },
-    {
-      "keyword": "Gute Laune"
-    }
-  ],
+  "site_keywords": [],
   "posts_per_page": 5,
   "github_account": ""
 }
