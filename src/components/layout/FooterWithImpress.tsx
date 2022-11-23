@@ -42,7 +42,6 @@ const FooterWithImpress = () => {
       <Footer onSetImpress={handleShowMeta} />
       <ImpressWrapper visible={showImpress === 'impress'} ref={impressRef}>
         <TitleAndClose>
-          <h3>Impressum</h3>
           <button onClick={() => handleShowMeta('notShown')}>X</button>
         </TitleAndClose>
         <Body>{FooterContent.impressBody}</Body>
@@ -52,7 +51,6 @@ const FooterWithImpress = () => {
         ref={dataSecurityRef}
       >
         <TitleAndClose>
-          <h3>Datenschutz</h3>
           <button onClick={() => handleShowMeta('notShown')}>X</button>
         </TitleAndClose>
         <Body>{FooterContent.dataSecurityBody}</Body>

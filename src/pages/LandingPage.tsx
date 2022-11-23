@@ -6,6 +6,7 @@ import Sprout from '$images/sprout.png'
 import Support from '$images/support.png'
 import Where from '$images/where.png'
 import Sections from '$meta/sections.yml'
+
 const LandingPage = () => {
   return (
     <BodyWrapper>
@@ -16,21 +17,21 @@ const LandingPage = () => {
           body={Sections.section1.body}
           logo={Sprout}
           rounded={'top'}
-        ></Section>
+        />
         <Section
           id={'Section2'}
           title={Sections.section2.title}
           body={Sections.section2.body}
           logo={Where}
           isWhite
-        ></Section>
+        />
         <Section
           id={'Section3'}
           title={Sections.section3.title}
           body={Sections.section3.body}
           logo={Support}
           rounded={'bottom'}
-        ></Section>
+        />
       </ContentBox>
     </BodyWrapper>
   )
