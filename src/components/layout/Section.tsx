@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import styled from 'styled-components'
 
@@ -10,7 +10,7 @@ interface SectionProps {
   title?: string
   body?: string
   id: string
-  logo: StaticImageData
+  logo?: StaticImageData
   rounded?: 'top' | 'bottom'
 }
 
@@ -66,16 +66,16 @@ const StyledSection = styled.div<StyledSectionProps>`
   }
 `
 
-const ContentContainer = styled.div`
-  text-align: left;
-`
-
 const Body = styled(ReactMarkdown)`
   text-align: left;
   font-size: 40px;
   margin: auto;
-  > p {
+  p {
     line-height: 40px;
     padding-bottom: 1rem;
+  }
+  a {
+    color: var(--primary-color);
+    font-weight: bold;
   }
 `
